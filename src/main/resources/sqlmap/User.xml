@@ -15,4 +15,7 @@
         SELECT *  FROM user WHERE id = #{id}
     </select>
 
+    <select id="selectUserByUsername" resultType="com.sunny.maven.pojo.User" parameterType="string">
+        select * from user where username like '%${value}%'
+    </select>
 </mapper>
